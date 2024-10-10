@@ -55,7 +55,8 @@ function addProduct(event) {
         rating: Number(rating),
         urlAvatar
     }
-    addProductToList(product)
+    addProductToList(product);
+    clearForm();
 }
 const addProductToList = ({name, price, category, rating, urlAvatar }) => {
     const productList = document.getElementById('productList');
@@ -65,9 +66,20 @@ const addProductToList = ({name, price, category, rating, urlAvatar }) => {
         <h3>${name}</h3>
         <p>Preço: R$ ${price.toFixed(2)}</p>
         <p>Categorias: ${category}</p>
-        <div class="rating">${rating}</div>
+        <div class="rating">${renderStars(rating)}</div>
     `;
     productList.appendChild(li);
 }
+
+const clearForm = () => {
+    document.getElementById('productForm').reset();
+};
+
+const renderStars = rating => {
+    const fullStar = '★';
+    const emptyStar = '☆';
+    return fullStar.repeat(rating) + emptyStar.repeat(5 - rating);
+}
+
 loadCategorias()
 document.getElementById('productForm').addEventListener('submit', addProduct);
