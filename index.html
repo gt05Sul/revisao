@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de Produtos</h1>
+    </header>
+    <form id="productForm">
+        <input type="text" id="name" placeholder="Nome do produto" required>
+        <input type="url" id="urlAvatar" placeholder="URL da imagem" required>
+        <input type="number" id="price" placeholder="Preço" required>
+        <select id="category"></select>
+        <input type="number" id="rating" placeholder="Nota" min="1" max="5" required>
+        <button type="submit">Adicionar</button>
+    </form>
+    <section>
+        <ul id="productList"></ul>
+    </section>
+</body>
+</html>

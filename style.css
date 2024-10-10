@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#productForm {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background-color: #1E88E5;
+    color: white;
+    padding: 20px;
+    margin: 0 0px 10px;
+    text-align: center;
+}
+
+input,
+select,
+button {
+    padding: 20px;
+    margin: 15px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+select:focus,
+button:focus {
+    border-color: #1E88E5;
+    box-shadow: 0 0 5px rgba(30, 136, 229, 0.4);
+    outline: none;
+}
+
+button {
+    background-color: #1E88E5;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+    background-color: #1565C0;
+    transform: translateY(-2px);
+}
+
+#productList {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+#category {
+    padding: 5px 30px 5px 10px;
+    /* Recuo para o texto do select */
+    color: #555;
+    /* Cor padrão do texto */
+    appearance: none;
+    /* Remove a seta padrão do select */
+    background: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down" viewBox="0 0 16 16"%3E%3Cpath d="M3.204 5h9.592L8 10.481 3.204 5z"/%3E%3C/svg%3E') no-repeat right 10px center;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    /* Ajuste da borda */
+    border-radius: 4px;
+    /* Cantos arredondados */
+}
+
+#category:focus {
+    outline: none;
+    border: 2px solid #007BFF;
+    /* Adiciona uma borda ao focar */
+}
+
+
+
+li {
+    list-style: none;
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+}
+
+img {
+    max-width: 60%;
+    height: auto;
+}
+
+.rating {
+    color: #f39c12;
+    font-size: 18px;
+}
